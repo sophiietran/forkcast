@@ -27,3 +27,52 @@ header{
   color: #f3f5f4;
   font-weight: 500;
 }
+
+main{
+  /* top left/right/bottom */
+  padding: 30px 30px 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ingredients-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ingredients-form > input{
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 4px 15px;
+  width: 100%;
+  max-width: 275px;
+  color: #333;
+  cursor: text;
+}
+
+.ingredients-form input:focus {
+  box-shadow: 0 0 0 2px #cdc6b6; 
+  outline: none; /* Remove default outline if box-shadow is your focus indicator */
+}
+
+.ingredients-form > button{
+  padding: 4px 15px;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  background-color: #253a4a;
+  color: #f3f5f4;
+  width: 160px;
+  height: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-out;
+}
+
+.ingredients-form button:hover {
+  background-color: #0d1419; /* Darker blue */
+  transform: translateY(-0.5px); /* Subtle lift */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
