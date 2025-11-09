@@ -89,3 +89,68 @@ main{
   font-weight: 400;
   text-align: center;
 }
+
+.ingredient-display{
+  color: #0d1419;
+  max-width: 650px;
+  margin: 40px auto 0 auto;
+}
+
+.ingredient-display h2{
+  color: #253a4a;
+  font-size: 1.5rem;
+}
+
+.ingredient-display li{
+  padding: 4px;
+}
+
+.get-recipe-container{
+  background-color: #eae9e4 ;
+  color: #0d1419;
+  max-width: 650px;
+  margin: 40px auto 0 auto;
+  padding: 10px 30px;;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.get-recipe-text{
+  color: #0d1419;
+  margin: auto 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.get-recipe-text h3{
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.get-recipe-text p{
+  font-size: 0.9rem;
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+}
+
+.get-recipe-container > button{
+  background-color: #e0a840;
+  padding: 4px 15px;
+  font-weight: 500;
+  border: #bc8d36;
+  border-radius: 5px;
+  color: #f3f5f4;
+  margin-right: 20px;
+  height: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-out;
+  white-space: nowrap;
+}
+
+.get-recipe-container button:hover {
+  background-color: #bc8d36; 
+  transform: translateY(-0.5px); /* Subtle lift */
+}
