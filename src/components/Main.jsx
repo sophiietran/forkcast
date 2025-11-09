@@ -1,4 +1,6 @@
 import React from "react";
+import IngredientsList from "./IngredientsList";
+import ShowRecipe from "./Recipe"
 
 export default function Main() {
   const [ingredients, setIngredients] = React.useState([
@@ -8,10 +10,7 @@ export default function Main() {
     "tomatoes",
   ]);
 
-  // map through items of ingredients and change to unordered list items
-  const ingredientsList = ingredients.map((ingredient) => (
-    <li key={ingredient}>{ingredient}</li>
-  ));
+  
 
   const [recipeShown, setRecipeShown] = React.useState("false");
 
@@ -23,7 +22,6 @@ export default function Main() {
 
   function getRecipe() {
     setRecipeShown((prev) => !prev);
-    console.log(recipeShown);
   }
 
   return (
@@ -43,28 +41,13 @@ export default function Main() {
         Please enter at least 4 ingredients to get a recipe!
       </p>
 
-      {ingredientsList.length > 0 && (
-        <section className="ingredient-display">
-          <h2>Ingredients on hand:</h2>
-          <ul>{ingredientsList}</ul>
-        </section>
-      )}
+      {ingredients.length > 0 && <IngredientsList 
+      ingredients = {ingredients} 
+      getRecipe = {getRecipe}
+      />}
 
-      {ingredientsList.length > 3 && (
-        <div className="get-recipe-container">
-          <div className="get-recipe-text">
-            <h3>Get your recipe!</h3>
-            <p>
-              Click the button to generate a recipe from your list of
-              ingredients
-            </p>
-          </div>
-          <button onClick={getRecipe} className="get-recipe-button">
-            Get Recipe
-          </button>
-        </div>
-      )}
-      {recipeShown === false ? <h2>show recipe right herrreee</h2> : null}
+      <ShowRecipe recipeShown = {recipeShown}/>
+      
     </main>
   );
 }
