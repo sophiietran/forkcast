@@ -18,16 +18,27 @@ export default function Main(){
       <main>
         {/* form to input ingredients */}
         <form action={addIngredient} className="ingredients-form">
-          <input 
-            type="text" 
-            placeholder="e.g. chicken" 
+          <input
+            type="text"
+            placeholder="e.g. chicken"
             aria-label="Add ingredient"
-            name = "ingredient"
-            />
+            name="ingredient"
+          />
           <button>+ Add ingredient</button>
         </form>
 
-        <ul>{ingredientsList}</ul>
+        <p className="minimum-ingredients">
+          Please enter at least 4 ingredients to get a recipe!
+        </p>
+
+        {ingredientsList.length > 0 && 
+        <section>
+            <h2>Ingredients on hand:</h2>
+            <ul>{ingredientsList}</ul>
+        </section>
+        }
+
+        {ingredientsList.length > 3 && "get recipe"}
       </main>
     );
 }
