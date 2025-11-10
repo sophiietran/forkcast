@@ -1,10 +1,11 @@
-export default function Recipe(props){
+import React from "react";
+import ReactMarkdown from "react-markdown";
 
-    return (
-      <>
-        {props.recipeShown === false ? (
-          <h2>show recipe right herrreee</h2>
-        ) : null}
-      </>
-    );
+export default function Recipe(props) {
+  return (
+    <section className="recipe-container">
+      <h2 className="recipe-container-recommend">ForkCast Recommends:</h2>
+      <ReactMarkdown>{props.recipe}</ReactMarkdown>
+    </section>
+  );
 }

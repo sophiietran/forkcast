@@ -1,6 +1,7 @@
 import React from "react";
 import IngredientsList from "./IngredientsList";
 import ShowRecipe from "./Recipe"
+import { getRecipeFromAI } from "./ai";
 
 export default function Main() {
   const [ingredients, setIngredients] = React.useState([
@@ -10,9 +11,7 @@ export default function Main() {
     "tomatoes",
   ]);
 
-  
-
-  const [recipeShown, setRecipeShown] = React.useState("false");
+  const [recipe, setRecipe] = React.useState("");
 
   // get the new ingredient from user input and add to state array
   function addIngredient(formData) {
@@ -20,8 +19,10 @@ export default function Main() {
     setIngredients((prev) => [...prev, newIngredient]);
   }
 
-  function getRecipe() {
-    setRecipeShown((prev) => !prev);
+  async function getRecipe() {
+    const recipeMarkdown = await getRecipeFromAI(ingredients)
+    //console.log(recipeMarkdown)
+    setRecipe(recipeMarkdown)
   }
 
   return (
@@ -46,7 +47,7 @@ export default function Main() {
       getRecipe = {getRecipe}
       />}
 
-      <ShowRecipe recipeShown = {recipeShown}/>
+      {recipe && <ShowRecipe recipe = {recipe}/>}
       
     </main>
   );

@@ -154,3 +154,25 @@ main{
   background-color: #bc8d36; 
   transform: translateY(-0.5px); /* Subtle lift */
 }
+
+.recipe-container{
+  max-width: 750px;
+  margin: 30px auto 0 auto;
+  padding: 10px 30px;
+  color:#0d1419;
+}
+.recipe-container-recommend{
+  color: #253a4a;
+  font-weight: 500;
+  margin-bottom: 30px;
+  
+}
+
+.recipe-container h2{
+  font-style: italic;
+}
+
+.recipe-container h3{
+  color: #ca9b45;
+  font-weight: 300;
+}
