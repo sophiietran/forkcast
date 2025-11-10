@@ -30,10 +30,20 @@ header{
 
 main{
   /* top left/right bottom */
-  padding: 50px 30px;
+  padding: 20px 30px;
   max-width: 100%;
-  margin: 0;
+  margin: 0 auto;
   
+}
+
+.description{
+  font-size: 0.92rem;
+  max-width: 650px;
+  margin: 10px auto 0 auto;
+  padding: 10px 30px 30px;
+  color:#be903c;
+  text-align: center;
+  font-weight: 400;
 }
 
 .ingredients-form{
@@ -165,6 +175,7 @@ main{
   color: #253a4a;
   font-weight: 500;
   margin-bottom: 30px;
+  font-size: 1.4rem;
   
 }
 
