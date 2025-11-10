@@ -21,7 +21,14 @@ export default function IngredientsList(props) {
             </p>
           </div>
           <button onClick={props.getRecipe} className="get-recipe-button">
-            Get Recipe
+            {props.isLoading ? (
+              <>
+                <span className="spinner"></span> {/* Your CSS spinner */}
+                Loading...
+              </>
+            ) : (
+              "Get Recipe"
+            )}
           </button>
         </div>
       )}

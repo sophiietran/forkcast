@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 
 const ai = new GoogleGenAI({
-  apiKey: "AIzaSyCFEPWXTXAMa9N6ex4XUa_jpQ0L6KyCLsk",
+  apiKey: "", //ENTER GEMINI API KEY HERE
 });
 
 export async function getRecipeFromAI(ingredientsArr) {
